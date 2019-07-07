@@ -1,4 +1,4 @@
-- ## chapter9 泛型算法
+- ## chapter10 泛型算法
 
     [TOC]
 
