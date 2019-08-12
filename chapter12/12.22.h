@@ -94,10 +94,10 @@ ConstStrBlobPtr& ConstStrBlobPtr::incr() {    // 前缀递增，返回递增后对象的引用
 	return *this;
 }
 
-ConstStrBlobPtr StrBlob::begin(){
+ConstStrBlobPtr StrBlob::begin(){ const
 	return ConstStrBlobPtr(*this);
 }
 
-ConstStrBlobPtr StrBlob::end() {
+ConstStrBlobPtr StrBlob::end() { const
 	return ConstStrBlobPtr(*this, data->size());
 }
