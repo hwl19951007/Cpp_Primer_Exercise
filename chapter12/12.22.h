@@ -1,3 +1,7 @@
+#ifndef StrBlob_h
+#define StrBlob_h
+
+
 #include <string>
 #include <vector>
 #include <memory>
@@ -94,10 +98,12 @@ ConstStrBlobPtr& ConstStrBlobPtr::incr() {    // 前缀递增，返回递增后对象的引用
 	return *this;
 }
 
-ConstStrBlobPtr StrBlob::begin(){ const
+ConstStrBlobPtr StrBlob::begin() const { 
 	return ConstStrBlobPtr(*this);
 }
 
-ConstStrBlobPtr StrBlob::end() { const
+ConstStrBlobPtr StrBlob::end() const {
 	return ConstStrBlobPtr(*this, data->size());
 }
+
+#endif // StrBlob_h
